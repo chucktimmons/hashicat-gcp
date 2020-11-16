@@ -1,10 +1,10 @@
-module "vpc" {
-    source  = "terraform-google-modules/network/google"
-    version = "~> 2.5"
+module "network" {
+  source  = "app.terraform.io/ctimmons-training/network/google"
+  version = "2.5.0"
+  # insert required variables here
 
     project_id   = var.project
     network_name = "guarav-vpc"
-    routing_mode = "GLOBAL"
 
     subnets = [
         {
